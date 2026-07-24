@@ -6,20 +6,20 @@
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 <input type="file" id="fileinput"></input>
 <script>
-  const player = null
-  const inp = document.getElementById("fileinput")
+  let player = null
+  let inp = document.getElementById("fileinput")
   window.RufflePlayer = window.RufflePlayer || {}
   window.addEventListener('load', (event) => {
-    const ruffle = window.RufflePlayer.newest()
+    let ruffle = window.RufflePlayer.newest()
     player = ruffle.createPlayer()
-    const container = document.getElementById("container")
+    let container = document.getElementById("container")
     container.appendChild(player)
   })
 
   inp.addEventListener("changed",(e) => {
-    const files = e.target.files
+    let files = e.target.files
     if (files.length > 0) {
-      const file = fileList[0]
+      let file = fileList[0]
       console.log(file.name)
     }
   })
