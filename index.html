@@ -9,7 +9,7 @@
   let player = null
   let inp = document.getElementById("fileinput")
   window.RufflePlayer = window.RufflePlayer || {}
-  window.addEventListener('load', (event) => {
+  window.addEventListener('DOMContentLoaded', (event) => {
     let ruffle = window.RufflePlayer.newest()
     player = ruffle.createPlayer()
     let container = document.getElementById("container")
