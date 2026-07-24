@@ -4,17 +4,27 @@
 
 <body>
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+<input type="file" id="fileinput"></input>
 <script>
+  const player
+  const inp = document.getElementById("fileinput")
   window.RufflePlayer = window.RufflePlayer || {}
   window.addEventListener('load', (event) => {
     const ruffle = window.RufflePlayer.newest()
-    const player = ruffle.createPlayer()
+    player = ruffle.createPlayer()
     const container = document.getElementById("container")
     container.appendChild(player)
   })
-</script>
-<input type="file" id="fileinput"></input>
 
+  inp.addEventListener("changed",(e) => {
+    const files = e.target.files
+    if (files.length > 0) {
+      const file = fileList[0]
+      console.log(file.name)
+    }
+  })
+  
+</script>
 </body>
 
 </html>
