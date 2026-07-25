@@ -23,7 +23,7 @@
       console.log(file.name)
       const read = new FileReader()
       read.onload = (event) => {
-        const buffer = event.target.result
+        const buffer = new Uint8Array(event.target.result)
         player.load(buffer)
       }
       read.readAsArrayBuffer(file)
