@@ -22,7 +22,12 @@
     if (files.length > 0) {
       let file = files[0]
       console.log(file.name)
-      player.ruffle().load(file.name)
+      const read = new FileReader()
+      read.onload = function (event) {
+        const buffer = event.target.result
+        player.ruffle().load(buffer)
+      }
+      reader.readAsArrayBuffer(file)
     }
   })
   
