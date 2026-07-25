@@ -10,8 +10,8 @@
   window.RufflePlayer = window.RufflePlayer || {}
   window.addEventListener('DOMContentLoaded', (event) => {
     let inp = document.getElementById("fileinput")
-    let player = ruffle.createPlayer()
     let ruffle = window.RufflePlayer.newest()
+    let player = ruffle.createPlayer()
     
     let container = document.getElementById("container")
     container.append(player)
