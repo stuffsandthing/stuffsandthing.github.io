@@ -25,7 +25,7 @@
       const read = new FileReader()
       read.onload = function (event) {
         const buffer = event.target.result
-        player.ruffle().load(buffer)
+        player.load(buffer)
       }
       read.readAsArrayBuffer(file)
     }
