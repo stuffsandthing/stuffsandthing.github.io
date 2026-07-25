@@ -17,11 +17,12 @@
     container.append(player)
   })
 
-  inp.addEventListener("changed",(e) => {
+  inp.addEventListener("change",(e) => {
     let files = e.target.files
     if (files.length > 0) {
-      let file = fileList[0]
+      let file = files[0]
       console.log(file.name)
+      player.ruffle().load(file)
     }
   })
   
