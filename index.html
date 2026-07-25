@@ -7,17 +7,16 @@
 <input type="file" id="fileinput"></input>
 <div id="container"></div> 
 <script>
-  let player = null
-  let inp = document.getElementById("fileinput")
   window.RufflePlayer = window.RufflePlayer || {}
   window.addEventListener('DOMContentLoaded', (event) => {
+    let inp = document.getElementById("fileinput")
+    let player = ruffle.createPlayer()
     let ruffle = window.RufflePlayer.newest()
-    player = ruffle.createPlayer()
+    
     let container = document.getElementById("container")
     container.append(player)
-  })
 
-  inp.addEventListener("change",(e) => {
+    inp.addEventListener("change",(e) => {
     let files = e.target.files
     if (files.length > 0) {
       let file = files[0]
@@ -30,6 +29,9 @@
       read.readAsArrayBuffer(file)
     }
   })
+  })
+
+  
   
 </script>
 </body>
