@@ -22,7 +22,7 @@
       let file = files[0]
       console.log(file.name)
       const read = new FileReader()
-      read.onload = function (event) {
+      read.onload = (event) => {
         const buffer = event.target.result
         player.load(buffer)
       }
