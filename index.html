@@ -6,33 +6,7 @@
 </head>
 
 <body>
-<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-<input type="file" id="fileinput"></input>
-<div id="container"></div> 
-<script>
-  window.RufflePlayer = window.RufflePlayer || {}
-  window.addEventListener('DOMContentLoaded', (event) => {
-    let inp = document.getElementById("fileinput")
-    let ruffle = window.RufflePlayer.newest()
-    let player = ruffle.createPlayer()
-    
-    let container = document.getElementById("container")
-    container.append(player)
-
-    inp.addEventListener("change",(e) => {
-    let files = e.target.files
-    if (files.length > 0) {
-      let file = files[0]
-      console.log(file.name)
-      const url = URL.createObjectURL(file)
-      player.load(url)
-    }
-  })
-  })
-
-  
-  
-</script>
+  <p>welcome to stuffsandthing.github.io im going to add more stuff later</p>
 </body>
 
 </html>
